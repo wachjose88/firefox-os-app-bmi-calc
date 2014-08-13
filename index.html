@@ -1,0 +1,116 @@
+<html>
+    <head>
+    <title>BMI</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/bmi.css" />
+        <link rel="stylesheet" href="style/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="style/jquery.mobile.structure-1.4.2.min.css" />
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/defaults.js"></script>
+        <script src="js/jquery.mobile-1.4.2.min.js"></script>
+        <link rel="prefetch" type="application/l10n" href="locale/locales.ini" />
+        <script type="text/javascript" src="js/l10n.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/bmi.js"></script>
+        <script type="text/javascript">
+            $( document ).ready(function() {
+                bmi.init();
+            });
+        </script>
+    </head>
+    <body>
+        <div data-role="page" id="index">
+            <div data-theme="a" data-role="header">
+                <h3 data-l10n-id="headline">
+                    BMI Calculator
+                </h3>
+            </div>
+
+            <div data-theme="a" data-role="content">
+                <p data-l10n-id="intro">
+                    Calculate your Body-Mass-Index by entering
+                    your mass and your height.
+                </p>
+                <form>
+                    <input data-clear-btn="true" name="mass-field"
+                        id="mass-field" value="" type="number"
+                        placeholder="Mass (kg)" data-l10n-id="mass">
+                    <input data-clear-btn="true" name="height-field"
+                        id="height-field" value="" type="number"
+                        placeholder="Height (m)" data-l10n-id="height">
+                </form>
+                <a href="#" data-role="button" id="calc-button"
+                    data-l10n-id="calc">Calculate</a>
+
+                <div data-role="popup" id="data-error">
+                    <p data-l10n-id="data-error">
+                        Please enter meaningful values.
+                    </p>
+                </div>
+            </div>
+
+            <div data-theme="a" data-role="footer" data-position="fixed" style="text-align: center;"
+                data-l10n-id="footer">
+                BMI according to WHO
+            </div>
+        </div>
+
+
+        <div data-role="page" id="result">
+            <div data-theme="a" data-role="header">
+                <h3 data-l10n-id="headline">
+                    BMI Calculator
+                </h3>
+            </div>
+
+            <div data-theme="a" data-role="content">
+                <ul data-role="listview" data-inset="true" data-divider-theme="a">
+                    <li data-role="list-divider" data-l10n-id="your-data">Your Data</li>
+                    <li><span data-l10n-id="mass-input">Mass</span>:
+                        <span id="mass-input"></span> kg</li>
+                    <li><span data-l10n-id="height-input">Height</span>:
+                        <span id="height-input"></span> m</li>
+
+                    <li data-role="list-divider" data-l10n-id="result">Result</li>
+                    <li><span id="bmi-result"></span> kg/m²</li>
+
+                    <li id="very_severely_underweight-result" class="text-result"><span
+                        data-l10n-id="very_severely_underweight">Very severely underweight</span></li>
+                    <li id="severely_underweight-result" class="text-result"><span
+                        data-l10n-id="severely_underweight">Severely underweight</span></li>
+                    <li id="underweight-result" class="text-result"><span
+                        data-l10n-id="underweight">Underweight</span></li>
+                    <li id="normal-result" class="text-result"><span
+                        data-l10n-id="normal">Normal (healthy weight)</span></li>
+                    <li id="overweight-result" class="text-result"><span
+                        data-l10n-id="overweight">Overweight</span></li>
+                    <li id="moderately_obese-result" class="text-result"><span
+                        data-l10n-id="moderately_obese">Moderately obese (Class I)</span></li>
+                    <li id="severely_obese-result" class="text-result"><span
+                        data-l10n-id="severely_obese">Severely obese (Class II)</span></li>
+                    <li id="very_severely_obese-result" class="text-result"><span
+                        data-l10n-id="very_severely_obese">Very severely obese (Class III)</span></li>
+
+                    <li data-role="list-divider" data-l10n-id="your-normal">Your Normal weight</li>
+                    <li><span data-l10n-id="min">min</span>: <span id="min-normal"></span> kg
+                        - 18.5 kg/m²</li>
+                    <li><span data-l10n-id="max">max</span>: <span id="max-normal"></span> kg
+                        - 24.99 kg/m²</li>
+                    <li id="adopt-normal" style="white-space:normal;"></li>
+                </ul>
+                <a href="#index" data-role="button" id="change-button"
+                    data-l10n-id="change">Change values</a>
+                <a href="#index" data-role="button" id="new-button"
+                    data-l10n-id="new-calc">New Calculation</a>
+            </div>
+
+            <div data-theme="a" data-role="footer" data-position="fixed" style="text-align: center;"
+                data-l10n-id="footer">
+                BMI according to WHO
+            </div>
+        </div>
+
+
+    </body>
+</html>

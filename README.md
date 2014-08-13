@@ -1,4 +1,4 @@
-firefox-os-app-bmi-calc
+Firefox-OS-app BMI-Calc
 =======================
 
 A simple Firefox OS app for calculating the BMI.

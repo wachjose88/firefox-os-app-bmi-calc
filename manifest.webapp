@@ -1,0 +1,14 @@
+{
+  "name": "BMI",
+  "version": "1.0",
+  "description": "A simple BMI app",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Josef Wachtler",
+    "url": "https://github.com/wachjose88/"
+  },
+  "icons": {
+    "60": "/style/images/icon_60.png",
+    "128": "/style/images/icon_128.png"
+  }
+}
